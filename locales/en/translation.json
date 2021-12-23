@@ -1,0 +1,5 @@
+{
+    "apiPathNotExit": "API path does not exist",
+    "doesNotExit": "What you are trying to does not exist",
+    "badRequest":"Bad Request"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "node-practice",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "start2": "node ./bin/www",
+    "start": "cross-env NODE_ENV=production npm run migrate && cross-env NODE_ENV=production node ./bin/www",
+    "dev": "cross-env NODE_ENV=development npm run migrate && cross-env NODE_ENV=development nodemon ./bin/www",
+    "migrate": "sequelize-cli db:migrate"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-validator": "^6.13.0",
+    "file-type": "^17.0.0",
+    "helmet": "^4.6.0",
+    "http-errors": "~1.6.3",
+    "i18next": "^21.5.4",
+    "i18next-fs-backend": "^1.1.4",
+    "i18next-http-middleware": "^3.1.4",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1",
+    "sequelize-cli": "^6.3.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.4.3",
+    "jest-watch-typeahead": "^1.0.0",
+    "nodemon": "^2.0.15",
+    "smtp-server": "^3.9.0",
+    "supertest": "^6.1.6"
+  }
+}
