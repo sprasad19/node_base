@@ -32,22 +32,22 @@ app.use(middleware.handle(i18next));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
-
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "data")));
+app.use(express.static(path.join(__dirname, "logs")));
 
 // app.use("/", indexRouter);
 // app.use("/users", usersRouter);
 app.use(routes);
 
 // catch 404 and forward to error handler
-app.use("*",function (req, res, next) {
-  next(new NotFoundException('apiPathNotExit'));
+app.use("*", function (req, res, next) {
+  next(new NotFoundException("apiPathNotExit"));
 });
-
 
 app.use(ErrorHandler);
 
